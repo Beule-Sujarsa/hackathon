@@ -8,6 +8,7 @@ body {
     line-height: 1.6;
     background-color: #f7f2ea;
     color: #2f241c;
+    overflow-x: hidden;
 }
 
 html {
@@ -42,13 +43,6 @@ html {
     text-decoration: none;
 }
 
-.brand-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 .logo {
     margin: 0;
     font-size: 28px;
@@ -61,7 +55,7 @@ html {
     align-items: center;
 }
 
-.navbar a {
+.navbar-item {
     text-decoration: none;
     color: #3c2d23;
     font-size: 15px;
@@ -119,8 +113,8 @@ html {
 }
 
 .menu-card {
-    background-color: #ffffff;
-    border: 1px solid #eadfce;
+    background-color: transparent;
+    border: none;
     border-radius: 12px;
     padding: 14px;
 }
@@ -129,7 +123,7 @@ html {
     width: 100%;
     height: 190px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 0;
     margin-bottom: 12px;
 }
 
@@ -146,8 +140,8 @@ html {
 .menu-card span {
     display: inline-block;
     margin-top: 10px;
-    background-color: #fde4d7;
-    color: #8f2f16;
+    background-color: transparent;
+    color: inherit;
     padding: 4px 10px;
     border-radius: 20px;
     font-weight: bold;
@@ -172,6 +166,97 @@ html {
 
 .site-footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .brand {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navbar-item {
+        background-color: #f3e8d9;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 14px;
+        border-bottom: none;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 48px 0 54px;
+        background-position: center top;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .menu-section,
+    .about-section {
+        padding: 36px 0;
+    }
+
+    .menu-section h2,
+    .about-section h2 {
+        font-size: 26px;
+    }
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu-card {
+        padding: 12px;
+    }
+
+    .menu-image {
+        height: 150px;
+    }
+
+    .menu-card p {
+        font-size: 14px;
+    }
+
+    .scroll-note {
+        font-size: 13px;
+        margin-top: 16px;
+    }
 }
 
 
